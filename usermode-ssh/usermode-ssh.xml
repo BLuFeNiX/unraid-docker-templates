@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+  <TemplateURL>https://raw.githubusercontent.com/BLuFeNiX/unraid-docker-templates/master/templates/usermode-ssh.xml</TemplateURL>
+  <Beta>True</Beta>
+  <Name>usermode-ssh</Name>
+  <Registry>https://hub.docker.com/r/blufenix/unraid-ssh/</Registry>
+  <Repository>blufenix/unraid-ssh</Repository>
+  <Description>
+    SSH into Unraid
+  </Description>
+  <Overview>
+    It let's you SSH into Unraid
+  </Overview>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+    <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>2222</HostPort>
+        <ContainerPort>22</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name>UMASK</Name>
+      <Value>000</Value>
+    </Variable>
+    <Variable>
+      <Name>PUID</Name>
+      <Value>99</Value>
+    </Variable>
+    <Variable>
+      <Name>PGID</Name>
+      <Value>100</Value>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/Chase</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  </Containers>
