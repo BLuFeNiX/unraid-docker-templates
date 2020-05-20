@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>ubuntu-20.04</Name>
-  <Repository>ubuntu:20.04</Repository>
+  <Name>aws-cli</Name>
+  <Repository>amazon/aws-cli</Repository>
   <Registry/>
   <Network>bridge</Network>
   <MyIP/>
@@ -14,7 +14,7 @@
   <WebUI/>
   <TemplateURL/>
   <Icon/>
-  <ExtraParams>-ti --init</ExtraParams>
+  <ExtraParams>-it --init</ExtraParams>
   <PostArgs/>
   <CPUset/>
   <DateInstalled>1589733806</DateInstalled>
